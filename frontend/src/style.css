@@ -1,0 +1,59 @@
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+}
+
+html {
+  font-size: var(--app-root-font-size, 16px);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  color: #1f2028;
+  font-size: 1rem;
+}
+
+/* Keyboard accessibility */
+:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+/* Skip link: becomes visible when focused */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100000;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 16px;
+  top: 16px;
+}
+
+/* The main content container is focus-targeted after route changes */
+#main-content:focus {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
